@@ -17,18 +17,27 @@ const PersonList = () => {
     },
   ]
   return (
-    <Person />
-  )
+    <section>
+      <Person person={people[0]} />
+      <Person person={people[1]}>
+        <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
+      </Person>
+      <Person person={people[2]} />
+    </section>
+  );
 };
 
-const Person = () => {
-  const url = "https://randomuser.me/api/portraits/thumb/men/22.jpg";
+const Person = props => {
+  const {img, name, job} = props.person;
+  const {children} = props;
+  const url = `https://randomuser.me/api/portraits/thumb/men/${img}.jpg`;
 return(
   <div className="person"> 
     <img src={url} alt="person image"/>
     <div>
-      <h4>Name</h4>
-      <h4>Job title</h4>
+      <h4>{name}</h4>
+      <h4>{job}</h4>
+      {children}
     </div>
   </div>
 )
