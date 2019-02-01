@@ -4,6 +4,18 @@ import './App.css';
 const App = () => <PersonList/>;
 
 const PersonList = () => {
+
+  const people = [
+    {
+      img:22, name:'John', job:'Developer'
+    },
+    {
+      img:69, name: 'Ken', job: 'Engineer'
+    },
+    {
+      img:55, name: 'Tom', job: 'Analyst'
+    },
+  ]
   return (
     <Person />
   )
