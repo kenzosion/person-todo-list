@@ -18,11 +18,11 @@ const PersonList = () => {
   ]
   return (
     <section>
-      <Person person={people[0]} />
+      <Person person={people[0]}/>
       <Person person={people[1]}>
         <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h6>
       </Person>
-      <Person person={people[2]} />
+      <Person person={people[2]}/>
     </section>
   );
 };
